@@ -15,23 +15,23 @@ services:
     networks:
       - e-commerce-net
 
-  search_filter-service:
-    build:
-      context: ./search_filter
-    networks:
-      - e-commerce-net
+  # search_filter-service:
+  #   build:
+  #     context: ./search_filter
+  #   networks:
+  #     - e-commerce-net
 
-  cart-service:
-    build:
-      context: ./cart
-    networks:
-      - e-commerce-net
+  # cart-service:
+  #   build:
+  #     context: ./cart
+  #   networks:
+  #     - e-commerce-net
 
-  order-service:
-    build:
-      context: ./order
-    networks:
-      - e-commerce-net
+  # order-service:
+  #   build:
+  #     context: ./order
+  #   networks:
+  #     - e-commerce-net
 
   # user-service:
   #   build:
