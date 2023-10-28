@@ -1,0 +1,43 @@
+version: "3"
+
+services:
+  api-gateway:
+    build:
+      context: ./api-gateway
+    ports:
+      - "5001:5001"
+    networks:
+      - e-commerce-net
+
+  product-service:
+    build:
+      context: ./product
+    networks:
+      - e-commerce-net
+
+  search_filter-service:
+    build:
+      context: ./search_filter
+    networks:
+      - e-commerce-net
+
+  cart-service:
+    build:
+      context: ./cart
+    networks:
+      - e-commerce-net
+
+  order-service:
+    build:
+      context: ./order
+    networks:
+      - e-commerce-net
+
+  # user-service:
+  #   build:
+  #     context: ./user
+  #   networks:
+  #     - e-commerce-net
+
+networks:
+  e-commerce-net:
