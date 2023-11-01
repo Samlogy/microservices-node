@@ -1,0 +1,25 @@
+version: "3.0"
+
+services:
+  product-service:
+    build:
+      context: ./product
+    ports:
+      - "3001:3001"
+    # environment:
+    #   - MONGODB_URI=mongodb://mongo:27017/product
+    # depends_on:
+    #   - mongo
+    networks:
+      - e-commerce-net
+
+  # mongo:
+  #   image: mongo
+  #   ports:
+  #     - "27017:27017"
+  #   networks:
+  #     - e-commerce-net
+
+networks:
+  e-commerce-net:
+    driver: bridge

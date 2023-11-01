@@ -1,5 +1,9 @@
-/src/product/node_modules
-/src/user/node_modules
-/src/search_filter/node_modules
-/src/cart/node_modules
-/src/order/node_modules
+/product/node_modules
+/order/node_modules
+/user/node_modules
+
+/search_filter/node_modules
+/cart/node_modules
+
+
+tasks.txt

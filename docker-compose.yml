@@ -9,9 +9,15 @@ services:
     networks:
       - e-commerce-net
 
-  product-service:
+  # product-service:
+  #   build:
+  #     context: ./product
+  #   networks:
+  #     - e-commerce-net
+
+  order-service:
     build:
-      context: ./product
+      context: ./order
     networks:
       - e-commerce-net
 
@@ -27,13 +33,7 @@ services:
   #   networks:
   #     - e-commerce-net
 
-  # order-service:
-  #   build:
-  #     context: ./order
-  #   networks:
-  #     - e-commerce-net
-
-  # user-service:
+  # auth-service:
   #   build:
   #     context: ./user
   #   networks:

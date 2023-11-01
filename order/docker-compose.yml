@@ -1,0 +1,25 @@
+version: "3.0"
+
+services:
+  order-service:
+    build:
+      context: ./order
+    ports:
+      - "3002:3002"
+    environment:
+      - MONGODB_URI=mongodb://mongo:27017/order
+    # depends_on:
+    #   - mongo
+    networks:
+      - e-commerce-net
+
+  # mongo:
+  #   image: mongo
+  #   ports:
+  #     - "27017:27017"
+  #   networks:
+  #     - e-commerce-net
+
+networks:
+  e-commerce-net:
+    driver: bridge
