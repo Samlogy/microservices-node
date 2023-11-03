@@ -1,6 +1,8 @@
 /product/node_modules
 /order/node_modules
 /user/node_modules
+/rabbitmq/node_modules
+/api-gateway/node_modules
 
 /search_filter/node_modules
 /cart/node_modules

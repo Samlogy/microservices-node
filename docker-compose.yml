@@ -7,37 +7,44 @@ services:
     ports:
       - "5001:5001"
     networks:
-      - e-commerce-net
+      - src_e-commerce-net
 
-  # product-service:
-  #   build:
-  #     context: ./product
-  #   networks:
-  #     - e-commerce-net
+  product-service:
+    build:
+      context: ./product
+    networks:
+      - src_e-commerce-net
 
   order-service:
     build:
       context: ./order
     networks:
-      - e-commerce-net
+      - src_e-commerce-net
+
+  rabbitmq:
+    build:
+      context: ./rabbitmq
+    networks:
+      - src_e-commerce-net
 
   # search_filter-service:
   #   build:
   #     context: ./search_filter
   #   networks:
-  #     - e-commerce-net
+  #     - src_e-commerce-net
 
   # cart-service:
   #   build:
   #     context: ./cart
   #   networks:
-  #     - e-commerce-net
+  #     - src_e-commerce-net
 
   # auth-service:
   #   build:
   #     context: ./user
   #   networks:
-  #     - e-commerce-net
+  #     - src_e-commerce-net
 
 networks:
-  e-commerce-net:
+  src_e-commerce-net:
+    driver: bridge

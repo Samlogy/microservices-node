@@ -100,3 +100,7 @@ Employ tools like the ELK Stack, Prometheus, and Grafana to monitor, log, and tr
 ### Load Balancing:
 
 Use load balancers to distribute traffic evenly across multiple instances of microservices.
+
+## RabbitMQ
+
+username/password: guest/guest
