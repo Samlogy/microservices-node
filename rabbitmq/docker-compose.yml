@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+  rabbitmq:
+    image: rabbitmq:3.8-management-alpine
+    container_name: rabbitmq
+    ports:
+      - "5672:5672" # RabbitMQ default port for AMQP
+      - "15672:15672" # RabbitMQ Management UI
+    volumes:
+      - ./rabbitmq-data:/var/lib/rabbitmq/mnesia
+    networks:
+      - src_e-commerce-net
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+
+networks:
+  src_e-commerce-net:
+    driver: bridge
